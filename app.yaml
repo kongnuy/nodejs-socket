@@ -14,4 +14,6 @@
 # [START gae_quickstart_yaml]
 runtime: nodejs10
 service: nodejs-socket
+network:
+  session_affinity: true
 # [END gae_quickstart_yaml]
