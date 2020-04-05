@@ -32,14 +32,14 @@ app.get('/chat', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
-io.use((socket, next) => {
+socketio.use((socket, next) => {
   let handshake = socket.handshake;
   console.log("----- Socket info -----");
-  console(handshake.url)
-  console(handshake.address)
-  console(handshake.headers)
+  console.log(handshake.url)
+  console.log(handshake.address)
+  console.log(handshake.headers)
   console.log("----- end of Socket info -----");
-
+  next()
 });
 
 socketio.on("connection", (userSocket) => {
