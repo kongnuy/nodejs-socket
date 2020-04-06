@@ -20,7 +20,7 @@ const socketio = require('socket.io')(http,  {
 //app.use(cors());
 app.use(function (req, res, next) {
   console.log('Time:', Date.now());
-  console.log(req.originalUrl);
+  console.log(req.headers);
   next();
 });
 
